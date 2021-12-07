@@ -1,0 +1,14 @@
+---
+# tasks file for ansible-setup-arch
+- name: Install pacman packages
+  pacman:
+    name: cowsay
+    # not required. Name or list of names of the package(s) or file(s) to install, upgrade, or remove. Can't be used in combination with C(upgrade).
+    state: present # not required. choices: absent;latest;present. Desired state of the package.
+  # recurse: False # not required. When removing a package, also remove its dependencies, provided that they are not required by other packages and were not explicitly installed by a user. This option is deprecated since 2.8 and will be removed in 2.10, use `extra_args=--recursive`.
+  # force: False # not required. When removing package, force remove package, without any checks. Same as `extra_args="--nodeps --nodeps"`. When update_cache, force redownload repo databases. Same as `update_cache_extra_args="--refresh --refresh"`.
+  # extra_args: None # not required. Additional option to pass to pacman when enforcing C(state).
+  # update_cache: False # not required. Whether or not to refresh the master package lists. This can be run as part of a package installation or as a separate step.
+  # update_cache_extra_args: None # not required. Additional option to pass to pacman when enforcing C(update_cache).
+  # upgrade: False # not required. Whether or not to upgrade the whole system. Can't be used in combination with C(name).
+  # upgrade_extra_args: None # not required. Additional option to pass to pacman when enforcing C(upgrade).
